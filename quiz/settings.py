@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "quizzes",
     "nested_admin",
+    "rest_framework",
     "knox"
 ]
 
@@ -83,7 +84,7 @@ DATABASES = {
     }
 }
 
-REST_FRAMEWORK = {"DEFAULT_AUTHENTICATION_CLASSES":("knox.auth.TokenAuthentication")}
+REST_FRAMEWORK = {"DEFAULT_AUTHENTICATION_CLASSES":("knox.auth.TokenAuthentication",)}
 
 REST_KNOX = {"TOKEN_TTL":None,
              "TOKEN_LIMIT_PER_USER":None}
